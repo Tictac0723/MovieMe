@@ -135,28 +135,3 @@ section#contact {
         opacity: 0;
     }
 }
-
-
-/* Genre Button */
-
-.genre-btn {
-    display: block;
-    border-radius: 0.3em;
-    -webkit-border-radius: 0.3em;
-    -moz-border-radius: 0.3em;
-    padding: 4px 8px;
-    border: 0;
-    line-height: 1em;
-    cursor: pointer;
-    -webkit-appearance: none;
-    float: left;
-    outline: none;
-    margin: 0 5px 5px 0;
-    background: #AAAAAA;
-    color: #444;
-    font-weight: normal;
-}
-
-.genre-btn.clicked {
-    background: #ff0;
-}
