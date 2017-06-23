@@ -147,6 +147,21 @@ $(document).ready(function() {
                 case "Action & Adventure":
                     sortedList[i] = "Action"
                     break;
+                case "Independent Movies":
+                    sortedList[i] = "Independent"
+                    break;
+                case "TV Shows":
+                    sortedList[i] = "TV"
+                    break;
+                case "Foreign Movies":
+                    sortedList[i] = "Foreign"
+                    break;
+                case "Cult Movies":
+                    sortedList[i] = "Cult"
+                    break;
+                case "Faith & Spirituality":
+                    sortedList[i] = "Faith"
+                    break;
                 case "Children & Family Movies":
                     sortedList[i] = "Family"
                     break;
@@ -175,6 +190,7 @@ $(document).ready(function() {
             // Providing the initial button text
 
             // Adding the button to the buttons-view div
+            $("#select").html("Select a Genre");
             $("#buttons-view").append(a);
 
             catBtns.push(a);
