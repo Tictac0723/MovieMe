@@ -55,10 +55,19 @@ $(document).ready(function() {
                     renderButtons(sortedList);
                     //render the category buttons
                 }
+            }).fail(function() {
+                ShowSnackBar(); // show error message
             });
         }
 
     });
+
+    // Snackbar
+    function ShowSnackBar() {
+        var x = document.getElementById("snackbar")
+        x.className = "show";
+        setTimeout(function() { x.className = x.className.replace("show", ""); }, 3000);
+    }
 
     function GetChoice(category) {
 
