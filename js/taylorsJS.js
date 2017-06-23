@@ -131,7 +131,7 @@ $(document).ready(function() {
 
         // Deleting the movies prior to adding new movies
         // (this is necessary otherwise you will have repeat buttons)
-        //$("#clickBtn").empty();
+        $("#clickBtn").hide()
 
         // Looping through the array of movies
         for (var i = 0; i < sortedList.length; i++) {
@@ -168,13 +168,22 @@ $(document).ready(function() {
                     sortedList[i] = sortedList[i];
             }
 
-            a.addClass(sortedList[i]);
+            a.attr("id", sortedList[i]);
+
+            a.addClass("genre-btn");
+
+            //a.addClass(sortedList[i]);
             // Adding a data-attribute
             a.attr("data-name", sortedList[i]);
             // Providing the initial button text
 
             // Adding the button to the buttons-view div
             $("#buttons-view").append(a);
+
+            // Genre button
+            $('.genre-btn').click(function() {
+                $(this).toggleClass('clicked');
+            });
 
             catBtns.push(a);
         }
@@ -192,6 +201,9 @@ $(document).ready(function() {
                 var movies = GetChoice(category);
 
                 console.log(movies);
+
+                // highlight the button
+                $(this).toggleClass('clicked');
 
                 //now choose a movie at random
                 var selectedMovieUrl = GetMovieRandom(movies);
