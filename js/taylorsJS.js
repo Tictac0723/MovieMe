@@ -97,7 +97,8 @@ $(document).ready(function() {
                 $(".artwork").attr("src", response.Poster);
                 $(".rating").html("Rated: " + response.Rated);
                 $(".movie-name").html(response.Title);
-
+                $("#release-date").html("Released: " + response.Released);
+                $("#runtime").html("Runtime: " + response.Runtime);
                 $("#director-info").html("Director: " + response.Director);
                 $("#rotten-score").html(response.Ratings[1].Value);
                 $("#imdb-score").html(response.Ratings[0].Value);
